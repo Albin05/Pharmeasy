@@ -63,6 +63,7 @@ p {
   padding: 15px;
   border: 1px solid #dfe3e6;
   border-radius: 10px;
+  height: 470px;
 }
 .per_product_card:hover{
     border: 1px solid teal;
@@ -70,6 +71,7 @@ p {
 .per_prod_img > img {
   width: 100%;
   height: 200px;
+  object-fit: contain;
 }
 .per_prod_img {
     padding: 25px;
