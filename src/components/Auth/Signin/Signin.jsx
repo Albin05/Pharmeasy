@@ -34,18 +34,19 @@ export const Signin = () => {
 
     const dataSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8080/login', data).then((res) => {
-            
-            if(res.data === 'Either email or password is incorrect') {
-                // console.log(res.data)
-                setShow('Either email or password is incorrect')
+        axios
+          .post("https://master-pharm.herokuapp.com/login", data)
+          .then((res) => {
+            if (res.data === "Either email or password is incorrect") {
+              // console.log(res.data)
+              setShow("Either email or password is incorrect");
             } else {
-                sessionStorage.setItem('token', res.data.token);
-                dispatch(Auth(true));
-                console.log(auth)
-                navigate('/')
+              sessionStorage.setItem("token", res.data.token);
+              dispatch(Auth(true));
+              console.log(auth);
+              navigate("/");
             }
-        })
+          });
     }
 
     return (

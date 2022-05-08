@@ -20,13 +20,15 @@ export const Signup = () => {
 
     const dataSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8080/register', data).then((res) => {
-            if(res.data.errors.length === 3) {
-                setShow('Password is not strong')
-            } else if(res.data.errors.length == 2) {
-                setShow('Email id already exist')
+        axios
+          .post("https://master-pharm.herokuapp.com/register", data)
+          .then((res) => {
+            if (res.data.errors.length === 3) {
+              setShow("Password is not strong");
+            } else if (res.data.errors.length == 2) {
+              setShow("Email id already exist");
             }
-        })
+          });
     }
 
     return (
