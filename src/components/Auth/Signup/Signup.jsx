@@ -1,13 +1,15 @@
 
 import axios from "axios";
 import { useState } from "react";
-import '../Signup/Signup.css'
+import '../Signup/Signup.css';
 
 export const Signup = () => {
     const [data, setData] = useState({
         email: "",
         password: ""
     });
+
+    const [show, setShow] = useState('')
 
     const getData = (e) => {
         const name = e.target.name;
@@ -18,7 +20,13 @@ export const Signup = () => {
 
     const dataSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8080/register').then()
+        axios.post('http://localhost:8080/register', data).then((res) => {
+            if(res.data.errors.length === 3) {
+                setShow('Password is not strong')
+            } else if(res.data.errors.length == 2) {
+                setShow('Email id already exist')
+            }
+        })
     }
 
     return (
@@ -36,9 +44,10 @@ export const Signup = () => {
             </h5>
             <form onSubmit={dataSubmit}>
                 <label>Email</label>
-                <input type="text" name="email" id="email" onChange={getData} value={data.email} />
+                <input onClick={() => setShow('')} type="text" name="email" id="email" onChange={getData} value={data.email} required/>
                 <label>Password</label>
-                <input type="password" name="password" id="password" onChange={getData} value={data.password} />
+                <input onClick={() => setShow('')} type="password" name="password" id="password" onChange={getData} value={data.password} required/>
+                <h5 className="redAlert">{show}</h5>
                 <button>Sign Up</button>
             </form>
         </div>

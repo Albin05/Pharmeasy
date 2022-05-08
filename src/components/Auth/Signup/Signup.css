@@ -10,6 +10,10 @@
     display: flex;
 }
 
+.redAlert {
+    color: red;
+}
+
 .img1 {
     flex: .6;
     /* background: url('https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png'); */

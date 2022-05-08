@@ -7,6 +7,8 @@ import { Healthfood } from "./components/Products/Healthfood";
 import { Personalcare } from "./components/Products/Personalcare";
 import { ProductDetail } from "./components/Products/ProductDetail";
 import { Productsmain } from "./components/Products/Productsmain";
+import { Signin } from './components/Auth/Signin/Signin';
+import { Signup } from './components/Auth/Signup/Signup'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/products/healthfood" element={<Healthfood />}></Route>
         <Route path="/products/personalcare/:id" element={<ProductDetail />}></Route>
         <Route path="/medicines" element={<OrderMedicines />}></Route>
+        <Route path="/login" element={<Signin></Signin>}></Route>
+        <Route path="/signup" element={<Signup></Signup>}></Route>
       </Routes>
     </div>
   );
