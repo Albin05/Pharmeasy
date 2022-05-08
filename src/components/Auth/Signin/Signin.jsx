@@ -67,7 +67,7 @@ export const Signin = () => {
                 <label>Password</label>
                 <input type="password" onClick={() => setShow('')} name="password" id="password" onChange={getData} value={data.password} required/>
                 <h5 className="redAlert">{show}</h5>
-                <button>Login In</button>
+                <button>Login</button>
             </form>
         </div>
     )

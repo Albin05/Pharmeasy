@@ -2,14 +2,17 @@
 
 import { Link } from "react-router-dom"
 import "./Navbar.css"
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+const navigate = useNavigate();
+
     return (
       <div>
         <nav id="Navbar_main">
           <div className="Navbar_main_container">
             <div className="Navbar_main_firstDiv">
-              <div className="Navbar_main_logo">
+              <div onClick={() => navigate('/')} className="Navbar_main_logo">
                 <img
                   src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png"
                   alt=""
@@ -71,7 +74,8 @@ export const Navbar = () => {
                     alt=""
                   />
                   <li>
-                    <a href="/">Login/Signup</a>
+                    <a href="/login">Login</a>
+                    <a href="/signup">Signup</a>
                   </li>
                   <img
                     className="Navbarcart"
