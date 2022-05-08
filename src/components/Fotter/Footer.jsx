@@ -1,17 +1,43 @@
 import "./Fotter.css"
+import AutoPlayMethods from "./FotterSlider"
 
 
 export const Footer = () => {
    return (
        <div>
+
+           
+
+
+           <div style={
+               {
+                //    border:"1px solid blue",
+                   width:"98%",
+                   height:"400px",
+                   margin: "auto",
+               }
+           }>
+               <h1 style={
+                   {
+                       margin:"10px",
+                       
+                   }
+               }>What Client Says</h1>
+           <AutoPlayMethods></AutoPlayMethods>
+           </div>
+ 
+                     
+                    
+           {/* ---------------------------------------second-------------------------- */}
            <div id="Footer_main">
                <div>
                <h3>Simplifying Healthcare, Impacting Lives</h3>
                </div>
                <div className="Footer_main_button">
                    <h3>Download the App for free</h3>
-                   <button><img src="https://assets.pharmeasy.in/web-assets/dist/4e4f1cab.png" alt="" /></button>
-                   <button><img src="https://assets.pharmeasy.in/web-assets/dist/83095c03.png" alt="" /></button>
+                   <a href="https://play.google.com/store/apps/details?id=com.phonegap.rxpal&hl=en_IN&gl=US&utm_source=web&utm_medium=footer"> <button><img src="https://assets.pharmeasy.in/web-assets/dist/4e4f1cab.png" alt="" /></button></a>
+                   
+                   <a href="https://apps.apple.com/in/app/pharmeasy-healthcare-app/id982432643"> <button><img src="https://assets.pharmeasy.in/web-assets/dist/83095c03.png" alt="" /></button></a>
                </div>
 
                <div className="Footer_main_second">
@@ -76,10 +102,11 @@ export const Footer = () => {
                    <div>
                        <h3>Follow Us</h3>
                        <div>
-                       <i class="fa-brands fa-instagram"></i>
-                       <i class="fa-brands fa-facebook-f"></i>
-                       <i class="fa-brands fa-youtube"></i>
-                       <i class="fa-brands fa-twitter"></i>
+                       
+                       <a href="https://www.instagram.com/pharmeasyapp/"> <i class="fa-brands fa-instagram"></i></a>
+                       <a href="https://www.facebook.com/pharmeasy/"><i class="fa-brands fa-facebook-f"></i></a>
+                       <a href="https://www.youtube.com/channel/UCDats_DLX-bGZH3-KGu8JhA"><i class="fa-brands fa-youtube"></i></a>
+                       <a href="https://twitter.com/pharmeasyapp/"><i class="fa-brands fa-twitter"></i></a>
                        </div>
                    </div>
                   
