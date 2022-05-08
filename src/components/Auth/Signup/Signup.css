@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.signupHead {
+    width: 100%;
+    height: 90px;
+    background-color: #10847e;
+    display: flex;
+}
+
+.img1 {
+    flex: .6;
+    /* background: url('https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png'); */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 70%;
+}
+
+.img2 {
+    flex: .5;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.signup {
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: 100vh;
+    /* color: #fff; */
+}
+
+input {
+    width: 85%;
+    height: 35px;
+    border-radius: 7px;
+    border: 0.2px solid black;
+    padding: 0 5px;
+}
+
+label, h5 {
+    display: block;
+    text-align: left;
+    padding: 11px 11px 11px 31px;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #10847e;
+    width: 65%;
+    height: 35px;
+    border-radius: 7px;
+    border: 0px;
+    color: #fff;
+    font-weight: bold;
+}
