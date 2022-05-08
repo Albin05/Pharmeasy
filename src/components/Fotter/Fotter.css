@@ -1,6 +1,5 @@
 .views{
     margin-top: 400px;
-    border: 1px solid red;
 }
 .views > div:nth-child(1) > h2{
    text-align: left;
@@ -28,8 +27,6 @@
     text-align: start;
 }
 .views_flex{
- 
-    border: 1px solid blue; 
     width:  400px;
     height: 300px;
     margin-top: 30px;
