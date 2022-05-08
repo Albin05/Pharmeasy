@@ -1,0 +1,49 @@
+.main{
+    height: 100%;
+    width: 100% ;
+    margin-left: 10%;
+    margin-right: 10%;
+  
+    display: flex;
+    padding: 10px;
+  }
+  .left{
+    width: 60%;
+    
+  }
+  .div1{
+    width: 100%;
+  }
+  .subdiv{
+  display: flex;
+  }
+  .subdiv1{
+  width: 150px;
+  }
+  .subdiv1Img{
+  width: 50px;
+  height: 20px;
+  margin-top: 20px;
+  }
+  .subdiv2{
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  width: 700px;
+  }
+  h2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+  text-align: center;
+  }
+  .subdiv3{
+    width: 150px;
+  
+  }
+  input{
+    margin-top:20px
+  }
+  .right{
+    width: 40%;
+   
+  }
