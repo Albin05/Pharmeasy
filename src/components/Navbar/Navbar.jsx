@@ -16,7 +16,7 @@ export const Navbar = () => {
                 />
               </div>
               <div className="Navbar_main_searchbar">
-                <select className="SelectTag" id="">
+                <select className="SelectTag"  >
                   <option value="">---</option>
                   <option value="">804454</option>
                   <option value="">804453</option>
@@ -26,8 +26,9 @@ export const Navbar = () => {
                   placeholder="Search medicines/Healthcare products @18% Off"
                 />
                 <div>
-                  {" "}
-                  <i class="fa-solid fa-magnifying-glass"></i>{" "}
+                  {/* {" "} */}
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  {/* {" "} */}
                 </div>
               </div>
             </div>

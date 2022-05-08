@@ -9,13 +9,14 @@ import { ProductDetail } from "./components/Products/ProductDetail";
 import { Productsmain } from "./components/Products/Productsmain";
 import { Signin } from './components/Auth/Signin/Signin';
 import { Signup } from './components/Auth/Signup/Signup'
+import { HomeMain } from "./components/Home/Home";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/"></Route>
+        <Route path="/" element = {<HomeMain/>}></Route>
         <Route path="/products" element={<Productsmain />}></Route>
         <Route path="/products/personalcare" element={<Personalcare />}></Route>
         <Route path="/products/healthfood" element={<Healthfood />}></Route>
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Signin></Signin>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }
