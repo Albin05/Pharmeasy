@@ -77,3 +77,14 @@ p {
     padding: 25px;
   margin: auto;
 }
+.per_prod_top{
+  display: flex;
+  justify-content: space-between;
+}
+.per_prod_sort{
+  display: flex;
+  justify-content: space-between;
+}
+.per_prod_sort > p {
+  margin: 10px;
+}
