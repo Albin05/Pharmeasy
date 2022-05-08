@@ -28,12 +28,11 @@
 }
 .Navbar_main_searchbar{
     display: flex;
-    
 }
 
 .Navbar_main_searchbar > input{
-    width: 500px;
-    height: 48px;
+    width: 80%;
+    height: 44px;
     border: none;
     border-radius: 0;
      
@@ -44,7 +43,7 @@
     background-color: white;
     padding-top: 8px;
     border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px; 
+    border-top-right-radius: 5px;
    
    
 }
