@@ -103,7 +103,7 @@ export default function Cart() {
             </div>
           </div>
         </div>
-        <Link to="" >
+        <Link to={"/payment"} >
                                     <button className="proceedtp" >
                                     
                                         Proceed To Buy

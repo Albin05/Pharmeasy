@@ -11,6 +11,7 @@ import { Signup } from './components/Auth/Signup/Signup'
 import { HomeMain } from "./components/Home/Home";
 import { Footer } from "./components/Fotter/Footer";
 import Cart from "./components/Cart/cart";
+import Payment from "./components/Cart/payment";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
         <Route path="/medicines" element={<OrderMedicines />}></Route>
         <Route path="/login" element={<Signin></Signin>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
-        <Route path="/cart" element={<Cart/>}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/payment" element={<Payment/>}></Route>
       </Routes>
       <Footer/>
     </div>
