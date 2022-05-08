@@ -1,0 +1,46 @@
+.prod_det{
+    display: flex;
+    width: 900px;
+    margin: auto;
+    margin-top: 50px;
+}
+.prod_det_img{
+    width: 40%;
+    border: 1px solid #dfe3e6;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.prod_det_img > img{
+width: 100%;
+}
+.prod_det_des{
+    padding: 20px;
+}
+.prod_det_des > button {
+    background-color: teal;
+    color: white;
+    border: 0px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.prod_det_cart{
+    padding: 20px;
+    width: 30%;
+}
+.prod_det_cart > button{
+    width: 100%;
+    background-color: teal;
+    color: white;
+    border: 0px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.prod_det_cart > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+}
+.prod_det_teal {
+    color: teal;
+}
