@@ -1,9 +1,8 @@
 // import Box from '@mui/material/Box';
 // import { Button } from '@mui/material';
 //import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Link } from "@mui/material";
 import "./OrderMedicings.css"
-const OrderMedicings=()=>{
+export const OrderMedicines=()=>{
     return(
     
         <div className="main">
@@ -52,8 +51,8 @@ const OrderMedicings=()=>{
                 <div className="scroll">
 
                     <section>
-                  <div class="outer-wrapper">
-                      <div class="inner-wrapper">
+                  <div className="outer-wrapper">
+                      <div className="inner-wrapper">
                      <div class="pseudo-item">
                       <div className="scrollbox">
                            <img height={"60px"} src="https://cms-contents.pharmeasy.in/offer/6a4f1adb904-POcket_Logo.jpg?w=64&q=75"/>
@@ -62,7 +61,7 @@ const OrderMedicings=()=>{
                            </p>
                         </div>
                     </div>
-                    <div class="pseudo-item">
+                    <div className="pseudo-item">
                    <div className="scrollbox">
                          <img height={"60px"} src="https://cms-contents.pharmeasy.in/offer/4db0adda6b1-40.jpg?w=64&q=75"/>
                          <p><span>Flat 25% off + upto <br/> 5000 cashback <br/>
@@ -70,7 +69,7 @@ const OrderMedicings=()=>{
                          </p>
                    </div>
                    </div>
-                       <div class="pseudo-item">
+                       <div className="pseudo-item">
                     
                      <div className="scrollbox">
                          <img height={"60px"} src="https://cms-contents.pharmeasy.in/offer/79c9e323814-AMAZON.jpg?w=64&q=75"/>
@@ -79,7 +78,7 @@ const OrderMedicings=()=>{
                          </p>                
                     </div>
                  </div>
-                  <div class="pseudo-item">
+                  <div className="pseudo-item">
                     <div className="scrollbox">
                          <img height={"60px"} src="https://cms-contents.pharmeasy.in/offer/79c9e323814-AMAZON.jpg?w=64&q=75"/>
                          <p><span>Flat 25% off + upto <br/> 5000 cashback <br/>
@@ -316,4 +315,4 @@ const OrderMedicings=()=>{
         
     )
 }
-export {OrderMedicings};
+

@@ -8,20 +8,22 @@ export const Productsmain = () => {
         <div className="location">Home {`>`} Products</div>
         <CenterMode />
         <div className="product-categories">
-          <a href="">
+          <Link to={"/products/personalcare"}>
             <div className="product-single">
               <img
                 src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/1279753fc985369b8a8a5069f7fbe209.jpg"
                 alt=""
               />
-              <h4>Personal Care</h4>
+              <h4>
+                Personal Care
+              </h4>
               <div>
                 <p>Upto</p>
                 <p>80% off</p>
               </div>
             </div>
-          </a>
-          <a href="">
+          </Link>
+          <Link to={"/products/healthfood"}>
             <div className="product-single">
               <img
                 src="https://cdn01.pharmeasy.in/dam/discovery/categoryImages/b8832bde65de3cafbd8a84861b9b9d1d.jpg"
@@ -33,7 +35,7 @@ export const Productsmain = () => {
                 <p>57% off</p>
               </div>
             </div>
-          </a>
+          </Link>
           <a href="">
             <div className="product-single">
               <img
