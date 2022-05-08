@@ -9,8 +9,9 @@ export const Personalcare = () => {
   }, []);
 
   const getData = async () => {
-    const res = await fetch("http://localhost:8080/personalcare");
-    setProducts(await res.json());
+    const res = await fetch("https://master-pharm.herokuapp.com/products");
+    const data = await res.json();
+    setProducts(data);
   };
   return (
     <div className="per_main">
@@ -137,7 +138,7 @@ export const Personalcare = () => {
           <div className="per_product_cont">
             {products.map((e) => {
                 return (
-                  <Link to={`/products/personalcare/${e.id}`}>
+                  <Link to={`/products/personalcare/${e._id}`}>
                     <div className="per_product_card">
                       <div className="per_prod_img">
                         <img src={e.img_src} alt="" />

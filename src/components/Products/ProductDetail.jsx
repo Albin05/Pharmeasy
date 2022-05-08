@@ -9,14 +9,14 @@ const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]")
 export const ProductDetail = () => {
   const [product, setProduct] = useState({});
   const [cart, setCart] = useState(cartFromLocalStorage);
-  const { id } = useParams();
-  const location = useLocation();
-  console.log(location.pathname);
+  const { _id } = useParams();
   useEffect(() => {
-    axios.get(`http://localhost:8080/personalcare/${id}`).then(({ data }) => {
-      setProduct(data);
-      console.log(data);
-    });
+    axios
+      .get(`https://master-pharm.herokuapp.com/products/${_id}`)
+      .then(({ data }) => {
+        setProduct(data);
+        console.log(data);
+      });
   }, []);
 
   useEffect(() => {
