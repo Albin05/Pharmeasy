@@ -1,16 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { Footer } from "../Fotter/Footer";
 import "./ProductDetail.css";
 
-const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]")
-
+const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
 
 export const ProductDetail = () => {
   const [product, setProduct] = useState({});
   const [cart, setCart] = useState(cartFromLocalStorage);
   const { id } = useParams();
-  console.log('id', id)
+  console.log("id", id);
   useEffect(() => {
     axios
       .get(`https://master-pharm.herokuapp.com/products/${id}`)
@@ -22,13 +22,12 @@ export const ProductDetail = () => {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart])
+  }, [cart]);
 
   const addToCart = (product) => {
-    setCart([...cart, product])
-    alert("Added to Cart")
-  }
-  
+    setCart([...cart, product]);
+    alert("Added to Cart");
+  };
 
   return (
     <div className="prod_det">
@@ -42,10 +41,13 @@ export const ProductDetail = () => {
           MRP <s>{product.discounted_price}</s>
         </p>
         <div>{product.discount}</div>
-        <button onClick={()=> addToCart(product)}>Add To Cart</button>
+
+        <button onClick={() => addToCart(product)}>Add To Cart</button>
       </div>
       <div className="prod_det_cart">
-        <button>View Cart {">"}</button>
+        <Link to={"/cart"}>
+          <button>View Cart {">"}</button>
+        </Link>
         <div>
           <h5>Offers</h5>
           <h5 className="prod_det_teal">View all</h5>

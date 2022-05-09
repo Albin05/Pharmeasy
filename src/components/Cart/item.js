@@ -1,10 +1,13 @@
-import React from "react";
-import { products } from "./product";
+import React, { useEffect } from "react";
 import {useState} from "react"
 
 
 export const Items = ({name,img_src,discount,MRP,discounted_price}) => {
-  const [data,setdata]=useState(products);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("cart"));
+      setData(data);
+  }, []);
   // console.log(data)
   return (
     <>

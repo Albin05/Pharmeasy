@@ -1,4 +1,6 @@
 // import react from"react"
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import "./cart.css";
 // import { useState} from "react";
 import { Items } from "./item";
@@ -8,8 +10,9 @@ import { Items } from "./item";
 //   setPayment([...payment, product]);
 //   alert("Proceed To Payment");
 // };
-
+const data = JSON.parse(localStorage.getItem("cart"));
 export default function Cart() {
+  
   // console.log(Item)
   return (
     <div className="maindiv">
@@ -18,7 +21,7 @@ export default function Cart() {
           <div className="items">
             <div className="_3SUcN">
               <div className="_1ONo-">
-                <span className="_2SDij">1 Item In Cart</span>
+                <span className="_2SDij">{data.length} Item In Cart</span>
                 <span className="w4Nso">Prices are indicative</span>
               </div>
               <div>
@@ -100,8 +103,8 @@ export default function Cart() {
             </div>
           </div>
         </div>
-        <Link to="/payment" >
-                                    <button className="proceedtp" onClick={()=> toPayment()} >
+        <Link to={"/payment"} >
+                                    <button className="proceedtp" >
                                     
                                         Proceed To Buy
                                     </button>

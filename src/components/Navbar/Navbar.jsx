@@ -83,7 +83,7 @@ const navigate = useNavigate();
                     alt=""
                   />
                   <li>
-                    <a href="/">Cart</a>
+                    <Link to={"/cart"}>Cart</Link>
                   </li>
                 </ul>
               </div>

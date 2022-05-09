@@ -130,33 +130,38 @@ export const Personalcare = () => {
         <div className="per_products">
           <div className="per_prod_top">
             <h2>Personal Care</h2>
-            <div>
+            <div className="per_prod_sort">
               <p>Sort By:</p>
-              <select name="" id=""></select>
+              <select name="" id="">
+                <option value="">Popularity</option>
+                <option value="">Price low to high</option>
+                <option value="">Price high to low</option>
+                <option value="">Discount</option>
+              </select>
             </div>
           </div>
           <div className="per_product_cont">
             {products.map((e) => {
-                return (
-                  <Link to={`/products/personalcare/${e._id}`}>
-                    <div className="per_product_card">
-                      <div className="per_prod_img">
-                        <img src={e.img_src} alt="" />
-                      </div>
-
-                      <h5>{e.name}</h5>
-                      <div>
-                        <p>
-                          MRP <s>{e.discounted_price}</s>
-                        </p>
-                        <div>
-                          <p>{e.discount}</p>
-                        </div>
-                      </div>
-                      <h5>{e.MRP}</h5>
+              return (
+                <Link to={`/products/personalcare/${e._id}`}>
+                  <div className="per_product_card">
+                    <div className="per_prod_img">
+                      <img src={e.img_src} alt="" />
                     </div>
-                  </Link>
-                );
+
+                    <h5>{e.name}</h5>
+                    <div>
+                      <p>
+                        MRP <s>{e.discounted_price}</s>
+                      </p>
+                      <div>
+                        <p>{e.discount}</p>
+                      </div>
+                    </div>
+                    <h5>{e.MRP}</h5>
+                  </div>
+                </Link>
+              );
             })}
           </div>
         </div>
