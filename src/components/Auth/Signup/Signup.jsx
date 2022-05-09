@@ -2,8 +2,10 @@
 import axios from "axios";
 import { useState } from "react";
 import '../Signup/Signup.css';
+import { useNavigate } from "react-router-dom";
 
 export const Signup = () => {
+    const navigate = useNavigate();
     const [data, setData] = useState({
         email: "",
         password: ""
@@ -20,11 +22,16 @@ export const Signup = () => {
 
     const dataSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8080/register', data).then((res) => {
-            if(res.data.errors.length === 3) {
+        axios.post('https://master-pharm.herokuapp.com/register', data).then((res) => {
+            console.log(res.data)
+            if(res.data.errors) {
+                if(res.data.errors.length === 3) {
                 setShow('Password is not strong')
-            } else if(res.data.errors.length == 2) {
-                setShow('Email id already exist')
+                } else {
+                        setShow('Email id already exist')
+                }
+            } else {
+                navigate('/')
             }
         })
     }
