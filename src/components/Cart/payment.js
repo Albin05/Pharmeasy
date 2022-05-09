@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 export default function Payment() {
   
+  const handleOrder = () => {
+    alert("Your ordre has been placed")
+  }
   return (
   <div className="main" >
     <div className="left">
@@ -109,7 +112,7 @@ export default function Payment() {
           </div>
           <div className="subdiv2" >
             <h2>Pay On Delivery</h2>
-            <button o
+            <button onClick={()=>handleOrder()}
             > Place Order</button>
           </div>
           <div className="subdiv3">
