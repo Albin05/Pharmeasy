@@ -14,7 +14,7 @@ export const OrderMedicines = () => {
           </div>
           <div>
             <h3>Search for Medicines / Healthcare Products</h3>
-            <div className="Navbar_main_searchbar">
+            <div className="Navbar_main_searchbar_order">
               <select className="SelectTag" id="">
                 <option value="">
                   <h2>Select Pincode</h2>
@@ -56,7 +56,7 @@ export const OrderMedicines = () => {
           <section>
             <div className="outer-wrapper">
               <div className="inner-wrapper">
-                <div class="pseudo-item">
+                <div className="pseudo-item">
                   <div className="scrollbox">
                     <img
                       height={"60px"}

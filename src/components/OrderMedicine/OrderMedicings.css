@@ -43,6 +43,9 @@
     height: 50px;
     background-color: white;
 }
+.main{
+  flex-direction: column;
+}
 .order{
     border: 1px solid rgb(79,88,94);
     border-radius: 10px;
@@ -179,10 +182,10 @@ section {
 }
 
 
-.Navbar_main_searchbar > input:focus {
+.Navbar_main_searchbar_order > input:focus {
     border: none;
   }
-.Navbar_main_searchbar > .SelectTag{
+.Navbar_main_searchbar_order > .SelectTag{
     width: 320px;
     height: 52px;
     border: none;
